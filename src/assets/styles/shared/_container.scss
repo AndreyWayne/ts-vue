@@ -1,0 +1,40 @@
+@mixin container() {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 100%;
+  margin: 0 auto;
+
+  max-width: 640px;
+
+  position: relative;
+  width: 100%;
+
+  @include breakpoint('desktop') {
+    max-width: 1320px;
+  }
+
+  @include breakpoint('desktop', 'wide') {
+    max-width: 1320px;
+  }
+}
+
+@mixin main() {
+  width: 100%;
+
+  @include breakpoint('desktop') {
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 970px;
+  }
+
+  @include breakpoint('desktop', 'wide') {
+    max-width: 970px;
+  }
+}
+
+@mixin aside() {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 310px;
+}

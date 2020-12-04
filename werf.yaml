@@ -1,0 +1,44 @@
+configVersion: 1
+project: cybersport-front
+---
+image: backend
+from: "node:alpine"
+docker:
+  WORKDIR: /app
+  USER: root
+git:
+- add: /
+  to: /app
+  excludePaths:
+  - .helm
+  - .gitlab-ci.yml
+  stageDependencies:
+    install:
+    - 'package.json'
+    - 'package.lock'
+    setup:
+    - '*'
+ansible:
+  install:
+  - name: Registry authorization
+    environment:
+      NPM_USER: {{ env "REGISTRY_USER" }}
+      NPM_PASS: {{ env "REGISTRY_PASS" }}
+      NPM_REGISTRY: {{ env "REGISTRY_URL" }}
+      NPM_EMAIL: {{ env "REGISTRY_EMAIL" }}
+    shell: |
+      npx npm-cli-login
+  - name: Install packages based on package.json.
+    yarn:
+      path: /app/
+  - name: Clean yarn cache
+    shell: |
+      yarn cache clean
+    args:
+      chdir: /app
+  setup:
+  - name: Build the application
+    shell: |
+      yarn build
+    args:
+      chdir: /app

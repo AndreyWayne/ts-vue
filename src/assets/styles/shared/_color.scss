@@ -1,0 +1,44 @@
+$colors: (
+  'gray': (
+    'light': #f7f7f7,
+    'base': #eaeaea,
+    'dark': #888,
+    'medium': #d8d8d8,
+  ),
+
+  'green': (
+    'base': #2ab651,
+  ),
+
+  'licorice': (
+    'base': #2d3641,
+    'dark': #20242f,
+    'darkness': #1d222c,
+    'light': #c7d1e7,
+    'medium': #242a37,
+  ),
+
+  'primary': (
+    'base': #ff6f22,
+    'hover': #ff7e00,
+  ),
+
+  'red': (
+    'base': #b6432a,
+    'dark': #ff4500,
+  ),
+);
+
+///
+/// Returns a color.
+///
+/// @param {string} $key
+///   A color key in $colors.
+///
+/// @param {string} $type
+///   A color type.
+///
+@function color($key, $type: 'base') {
+  $map: map-get($colors, $key);
+  @return map-get($map, $type);
+}

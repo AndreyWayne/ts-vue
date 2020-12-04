@@ -1,0 +1,35 @@
+$breakpoints: (
+  'desktop': (
+    'base': 1024px,
+    'medium': 1280px,
+    'wide': 1600px,
+  ),
+
+  'mobile': (
+    'base': 320px,
+    'medium': 375px,
+    'wide': 425px,
+  ),
+
+  'tablet': (
+    'base': 768px,
+  ),
+);
+
+///
+/// Include styles for media query.
+///
+/// @param {string} $breakpoint
+///   A breakpoint key in $breakpoints.
+///
+/// @param {string} $type
+///   A breakpoint type.
+///
+@mixin breakpoint($breakpoint, $type: 'base') {
+  $map: map-get($breakpoints, $breakpoint);
+  $width: map-get($map, $type);
+
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}

@@ -1,0 +1,246 @@
+@import 'fonts';
+
+:root {
+  --color-background: #{color('gray', 'light')};
+  --color-border: #{transparentize(black, 0.92)};
+  --color-layer: white;
+  --color-primary: #{color('primary')};
+  --color-primary-secondary: #{color('primary', 'hover')};
+  --color-text: black;
+  --color-text-invers: white;
+  --color-text-light: #{transparentize(black, 0.5)};
+  --color-text-lighter: #{transparentize(black, 0.8)};
+  --color-primary--color-text-gray: #{color('gray', 'dark')};
+  --color-border-transparent: #{transparentize(black, 0.92)};
+  --color-green: #2ab651;
+  --color-red: #b6432a;
+  --color-gray: #c4c4c4;
+  --color-gray-dark: #{color('gray', 'dark')};
+  --color-pinned: white;
+  --color-bg-popular: #ffd1a6;
+  --color-pinned-another: #e4e6f1;
+  --color-poll: #efefef;
+}
+
+.dark-mode {
+  --color-background: #{color('licorice')};
+  --color-layer: #{color('licorice', 'medium')};
+  --color-text: white;
+  --color-text-invers: black;
+  --color-text-light: #{transparentize(white, 0.5)};
+  --color-text-lighter: #{transparentize(white, 0.8)};
+  --color-primary--color-text-gray: #{color('licorice', 'light')};
+  --color-text-gray: #{color('licorice', 'light')};
+  --color-border: rgba(255, 255, 255, 0.15);
+  --color-pinned: #{color('licorice', 'darkness')};
+  --color-pinned-another: #{color('licorice', 'darkness')};
+  --color-bg-popular: #485164;
+  --color-poll: #1f1f1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include font('base');
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  transition: background-color $transition-mode, color $transition-mode;
+  will-change: background-color, color;
+}
+
+a {
+  color: var(--color-text);
+  -webkit-tap-highlight-color: transparent;
+  transition: color $transition;
+  will-change: color;
+
+  @include hover() {
+    color: var(--color-primary);
+  }
+}
+
+img {
+  width: 100%;
+}
+
+select {
+  background: white;
+  border: 1px solid #2d3641;
+  border-radius: 2px;
+  font-size: 14px;
+  height: 30px;
+  line-height: 22px;
+  opacity: 0.5;
+  padding: 0 10px;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: var(--color-pinned-another);
+  color: var(--color-text-light);
+  font-size: 12px;
+  font-weight: bold;
+  transition: background-color $transition-mode, color $transition-mode;
+  will-change: background-color, color;
+
+  td {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+
+input {
+  outline: none;
+}
+
+/// Fade transition.
+.fade-enter-active,
+.fade-leave-active {
+  transition: visibility $transition, opacity $transition !important;
+  will-change: visibility, opacity;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Flag icon
+
+.flag {
+  svg {
+    width: 18px;
+  }
+}
+
+/// Social icons
+
+.fb {
+  @include hover() {
+    .circle {
+      fill: white;
+    }
+
+    .icon {
+      fill: #3b5998;
+    }
+  }
+
+  .circle {
+    fill: #3b5998;
+
+    transition: fill $transition;
+    will-change: fill;
+  }
+
+  .icon {
+    fill: white;
+
+    transition: fill $transition;
+    will-change: fill;
+  }
+}
+
+.vk {
+  @include hover() {
+    .circle {
+      fill: white;
+    }
+
+    .icon {
+      fill: #4c6c91;
+    }
+  }
+
+  .circle {
+    fill: #4c6c91;
+
+    transition: fill $transition;
+    will-change: fill;
+  }
+
+  .icon {
+    fill: white;
+
+    transition: fill $transition;
+    will-change: fill;
+  }
+}
+
+.tw {
+  @include hover() {
+    .circle {
+      fill: white;
+    }
+
+    .icon {
+      fill: #55acee;
+    }
+  }
+
+  .circle {
+    fill: #55acee;
+
+    transition: fill $transition;
+    will-change: fill;
+  }
+
+  .icon {
+    fill: white;
+
+    transition: fill $transition;
+    will-change: fill;
+  }
+}
+
+.rss {
+  @include hover() {
+    .circle {
+      fill: white;
+    }
+
+    .icon {
+      fill: #f8991d;
+    }
+  }
+
+  .circle {
+    fill: #f8991d;
+
+    transition: fill $transition;
+    will-change: fill;
+  }
+
+  .icon {
+    fill: white;
+
+    transition: fill $transition;
+    will-change: fill;
+  }
+}
+
+/// Other icons
+
+.icon-rating {
+  .white-stroke {
+    stroke: var(--color-layer);
+  }
+
+  .white-fill {
+    fill: var(--color-layer);
+  }
+}

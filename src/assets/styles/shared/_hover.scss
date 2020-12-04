@@ -1,0 +1,19 @@
+///
+/// Detect touch devices and include proper styles.
+///
+@mixin hover() {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}

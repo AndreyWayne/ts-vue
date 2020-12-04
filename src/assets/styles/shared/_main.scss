@@ -1,0 +1,12 @@
+@mixin main() {
+  width: 100%;
+
+  @include breakpoint('desktop') {
+    margin-right: 20px;
+    max-width: 970px;
+  }
+
+  @include breakpoint('desktop', 'wide') {
+    max-width: 970px;
+  }
+}

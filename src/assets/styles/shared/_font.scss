@@ -1,0 +1,13 @@
+$fonts: (
+  'base': ('Roboto', Arial, sans-serif),
+);
+
+///
+/// Change font-family by key.
+///
+/// @param {string} $font
+///   A font key in $fonts.
+///
+@mixin font($font: 'base') {
+  font-family: map-get($fonts, $font);
+}

@@ -1,0 +1,24 @@
+///
+/// Include loader styles.
+///
+@mixin loading() {
+  animation: loading 3s linear infinite;
+  background: linear-gradient(90deg, var(--color-background) 0, var(--color-text-lighter) 50%, var(--color-background));
+
+  background-position: 0 100%;
+  background-size: 200%;
+  border-radius: 2px;
+
+  transition: background $transition-mode;
+  will-change: background, background-position;
+}
+
+@keyframes loading {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}

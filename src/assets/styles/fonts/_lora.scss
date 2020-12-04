@@ -1,0 +1,56 @@
+@font-face {
+  font-display: swap;
+
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: bold;
+
+  src: url('../fonts/lora/Lora-Bold.eot');
+  src: url('../fonts/lora/Lora-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lora/Lora-Bold.woff2') format('woff2'),
+    url('../fonts/lora/Lora-Bold.woff') format('woff'),
+    url('../fonts/lora/Lora-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 500;
+
+  src: url('../fonts/lora/Lora-Medium.eot');
+  src: url('../fonts/lora/Lora-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lora/Lora-Medium.woff2') format('woff2'),
+    url('../fonts/lora/Lora-Medium.woff') format('woff'),
+    url('../fonts/lora/Lora-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: normal;
+
+  src: url('../fonts/lora/Lora-Regular.eot');
+  src: url('../fonts/lora/Lora-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lora/Lora-Regular.woff2') format('woff2'),
+    url('../fonts/lora/Lora-Regular.woff') format('woff'),
+    url('../fonts/lora/Lora-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+
+  src: url('../fonts/lora/Lora-SemiBold.eot');
+  src: url('../fonts/lora/Lora-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lora/Lora-SemiBold.woff2') format('woff2'),
+    url('../fonts/lora/Lora-SemiBold.woff') format('woff'),
+    url('../fonts/lora/Lora-SemiBold.ttf') format('truetype');
+}
+

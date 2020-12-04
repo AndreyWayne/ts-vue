@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edit page autoResize should set element style 1`] = `"0px"`;
+
+exports[`Edit page should render 1`] = `
+"<div class=\\"\\">
+  <div class=\\"\\"><textarea placeholder=\\"Заголовок\\" rows=\\"1\\" class=\\"\\"></textarea>
+    <!---->
+    <!---->
+  </div>
+</div>"
+`;

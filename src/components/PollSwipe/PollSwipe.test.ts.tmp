@@ -1,0 +1,18 @@
+// @todo fixme
+import { shallowMount, Wrapper } from '@vue/test-utils'
+import PollSwipe from '.'
+
+let wrapper: Wrapper<PollSwipe>
+let vm: any
+
+beforeEach(() => {
+  wrapper = shallowMount(PollSwipe)
+  vm = wrapper.vm
+})
+
+describe('PollSwipe', () => {
+  it('should render', () => {
+    expect(wrapper).toBeTruthy()
+    expect(vm).toBeTruthy()
+  })
+})

@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nuxt:
+    environment:
+      NODE_ENV: development
+    command: yarn dev
+    image: node:alpine
+    ports:
+      - '8080:8080'
+    volumes:
+      - ..:/app
+    working_dir: /app

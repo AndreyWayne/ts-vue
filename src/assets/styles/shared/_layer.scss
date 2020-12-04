@@ -1,0 +1,12 @@
+.layer {
+  background-color: white;
+  border-radius: 4px;
+
+  &_border {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  &_shadow {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+}
